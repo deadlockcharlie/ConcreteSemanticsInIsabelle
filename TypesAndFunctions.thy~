@@ -1,0 +1,19 @@
+theory TypesAndFunctions
+  imports Main
+begin
+
+value "1 + (2::nat)"
+value "1 + (2::int )"
+value "1 - (2::nat )" 
+value "1 - (2::int )"
+
+fun count:: "'a \<Rightarrow> 'a list \<Rightarrow> nat" where
+"count x [] = 0"|
+"count x ( y # xs) = (if x=y then 1+(count x xs) else count x xs)"
+
+theorem countSmallerThanLength [simp] :"count x xs \<le> length xs"
+  apply(induction xs)
+   apply(auto)
+  done
+
+end

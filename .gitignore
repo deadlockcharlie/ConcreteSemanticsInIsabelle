@@ -1,0 +1,33 @@
+# Ignore Isabelle build artifacts
+*.thy~
+*.ML~
+*.pdf
+*.ps
+*.log
+*.aux
+*.out
+*.blg
+*.bbl
+*.lof
+*.lot
+*.toc
+*.bak
+*.gz
+*.dvi
+
+# Ignore generated session folders (e.g., for heap images)
+.heaps/
+heaps/
+browser_info/
+log/
+
+# VS Code / Isabelle IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Global temporary files
+*.swp
+*.swo
+*~
+
